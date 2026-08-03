@@ -30,6 +30,15 @@
     .toggle a { color:var(--accent); text-decoration:none; font-weight:700; border:1px solid var(--border); padding:8px 16px; border-radius:20px; }
     footer { text-align:center; color:var(--muted); font-size:12px; margin-top:28px; }
     hr { border:none; border-top:1px solid var(--border); margin:26px 0; }
+    table { width:100%; border-collapse:collapse; margin-top:10px; font-size:14px; }
+    th, td { border:1px solid var(--border); padding:9px 11px; text-align:start; vertical-align:top; }
+    th { background:rgba(18,182,168,.10); color:var(--accent); font-weight:700; }
+    td:first-child { width:38%; font-weight:600; }
+    @media (max-width:560px) {
+      table, th, td { font-size:13px; }
+      th, td { padding:7px 8px; }
+      td:first-child { width:42%; }
+    }
   </style>
 </head>
 <body>
@@ -37,10 +46,10 @@
     <header>
       <div class="logo">Day1T1</div>
       <div class="sub">سياسة الخصوصية · Privacy Policy</div>
-      <div class="sub muted">آخر تحديث: 2026-07-08 · التواصل: support@day1t1.com</div>
+      <div class="sub muted">آخر تحديث: 2026-08-03 · التواصل: support@day1t1.com</div>
     </header>
 
-    <div class="toggle"><a href="#en">English ↓</a></div>
+    <div class="toggle"><a href="#en">English ↓</a> <a href="./terms.html">شروط الخدمة · Terms →</a></div>
 
     <!-- ============ العربية ============ -->
     <div class="card">
@@ -65,8 +74,64 @@
         <li>النسخ الاحتياطية التي تصدّرها يمكن تشفيرها بكلمة سر (AES-256).</li>
       </ul>
 
+      <h3>مدة الاحتفاظ بالبيانات</h3>
+      <p>نحتفظ بكل نوع من البيانات للمدة الموضّحة أدناه فقط:</p>
+      <table>
+        <tr><th>البيانات</th><th>مدة الاحتفاظ</th></tr>
+        <tr>
+          <td>بياناتك الصحية على جهازك</td>
+          <td>تبقى حتى تحذفها أنت، أو تحذف حسابك، أو تحذف التطبيق. لا نحذف شيئاً تلقائياً من جهازك.</td>
+        </tr>
+        <tr>
+          <td>النسخة السحابية للمزامنة</td>
+          <td>تبقى ما دام حسابك قائماً، ويُستبدل محتواها عند كل تغيير. تُحذف نهائياً عند حذف الحساب.</td>
+        </tr>
+        <tr>
+          <td>بيانات الحساب (البريد والمصادقة)</td>
+          <td>ما دام حسابك قائماً. تُحذف نهائياً عند حذف الحساب.</td>
+        </tr>
+        <tr>
+          <td>صور الوجبات وأوصافها</td>
+          <td><b>لا نخزّنها.</b> تُرسل لمزوّد الذكاء الاصطناعي لتنفيذ طلب التحليل وحده، ولا تُحفظ على خوادمنا.</td>
+        </tr>
+        <tr>
+          <td>رابط مشاركة التقرير مع الطبيب</td>
+          <td>يتوقّف عن العمل بعد <b>٧ أيام</b> من إنشائه، أو فور إلغائك له.</td>
+        </tr>
+        <tr>
+          <td>رمز دعوة المرافق</td>
+          <td>ينتهي بعد <b>٢٤ ساعة</b> أو عند استعماله مرّة واحدة، أيّهما أسبق.</td>
+        </tr>
+        <tr>
+          <td>لقطة الحالة التي يراها مرافقوك</td>
+          <td>صفّ واحد يُستبدل عند كل تحديث — لا يُبنى منه تاريخ. يُحذف عند حذف الحساب.</td>
+        </tr>
+        <tr>
+          <td>سجلّ تنبيهات الهبوط المُرسَلة</td>
+          <td>ما دام حسابك قائماً، ويمكنك رؤيته داخل التطبيق. يُحذف عند حذف الحساب.</td>
+        </tr>
+        <tr>
+          <td>رمز إشعارات جهاز المرافق</td>
+          <td>يُحذف فور تسجيل خروجك، أو حين يُبلغنا النظام أن الرمز لم يعد صالحاً.</td>
+        </tr>
+        <tr>
+          <td>تقارير الأعطال</td>
+          <td>تُنقّى من أي قيم صحية قبل إرسالها، ويحتفظ بها Firebase Crashlytics وفق سياسة Google (٩٠ يوماً).</td>
+        </tr>
+      </table>
+      <p class="muted">عند حذف حسابك تُمحى كل الصفوف المرتبطة به من خوادمنا في العملية نفسها — لا تبقى نسخة معلّقة.</p>
+
       <h3>المشاركة مع أطراف ثالثة</h3>
-      <p>Supabase (المصادقة والخادم) · مزوّد ذكاء اصطناعي (لتحليل الوجبات فقط عند استخدامك للميزة). لا نشارك بياناتك مع أي جهة أخرى.</p>
+      <p>لا نبيع بياناتك ولا نشاركها مع أي جهة غير المذكورة هنا، وكلٌّ منها لغرضٍ واحد محدّد:</p>
+      <ul>
+        <li><b>Supabase</b> — المصادقة وتخزين الحساب والنسخة السحابية.</li>
+        <li><b>Google (Gemini)</b> — تحليل صور الوجبات وأوصافها، عند استخدامك للميزة فقط.</li>
+        <li><b>Firebase Crashlytics</b> — تقارير الأعطال (مُنقّاة من القيم الصحية).</li>
+        <li><b>Firebase Cloud Messaging</b> — إيصال تنبيه الهبوط إلى مرافقيك.</li>
+        <li><b>Google Play Billing</b> — معالجة الاشتراك والتحقّق منه.</li>
+        <li><b>Cloudflare</b> — تشغيل نطاقنا وحمايته.</li>
+      </ul>
+      <p class="muted">تقع خوادم بعض هذه الخدمات خارج مصر، فيشمل استخدامك للتطبيق نقلاً للبيانات عبر الحدود.</p>
 
       <h3>حقوقك — حذف الحساب والبيانات</h3>
       <p>يمكنك <b>حذف حسابك وكل بياناتك نهائيًا</b> من داخل التطبيق: الإعدادات ← الحساب ← «حذف الحساب والبيانات». يمسح ذلك بياناتك من الجهاز ومن الخادم ولا يمكن التراجع عنه. أو تواصل معنا على بريد الدعم.</p>
@@ -99,8 +164,64 @@
         <li>Backups you export can be password-encrypted (AES-256).</li>
       </ul>
 
+      <h3>Data retention</h3>
+      <p>We keep each kind of data only for the period set out below:</p>
+      <table>
+        <tr><th>Data</th><th>Retention period</th></tr>
+        <tr>
+          <td>Your health data on your device</td>
+          <td>Kept until you delete it, delete your account, or uninstall the app. We never delete anything from your device automatically.</td>
+        </tr>
+        <tr>
+          <td>Cloud sync snapshot</td>
+          <td>Kept while your account exists and replaced on every change. Permanently deleted when you delete your account.</td>
+        </tr>
+        <tr>
+          <td>Account data (email &amp; authentication)</td>
+          <td>Kept while your account exists. Permanently deleted when you delete your account.</td>
+        </tr>
+        <tr>
+          <td>Meal photos and descriptions</td>
+          <td><b>We do not store them.</b> They are sent to the AI provider to carry out that single analysis request and are not saved on our servers.</td>
+        </tr>
+        <tr>
+          <td>Doctor report share link</td>
+          <td>Stops working <b>7 days</b> after it is created, or as soon as you revoke it.</td>
+        </tr>
+        <tr>
+          <td>Guardian invite code</td>
+          <td>Expires after <b>24 hours</b> or on first use, whichever comes first.</td>
+        </tr>
+        <tr>
+          <td>The status snapshot your guardians see</td>
+          <td>A single row replaced on each update — no history is built from it. Deleted when you delete your account.</td>
+        </tr>
+        <tr>
+          <td>Record of low-glucose alerts sent</td>
+          <td>Kept while your account exists, and visible to you inside the app. Deleted when you delete your account.</td>
+        </tr>
+        <tr>
+          <td>A guardian device's notification token</td>
+          <td>Deleted as soon as you sign out, or when the system tells us the token is no longer valid.</td>
+        </tr>
+        <tr>
+          <td>Crash reports</td>
+          <td>Scrubbed of any health values before they are sent; retained by Firebase Crashlytics under Google's policy (90 days).</td>
+        </tr>
+      </table>
+      <p class="muted">When you delete your account, every row linked to it is erased from our servers in the same operation — no copy is left behind.</p>
+
       <h3>Third parties</h3>
-      <p>Supabase (authentication &amp; backend) · an AI provider (only to analyze meals when you use that feature). We share your data with no one else.</p>
+      <p>We do not sell your data and share it with no one beyond those listed here, each for a single stated purpose:</p>
+      <ul>
+        <li><b>Supabase</b> — authentication, account storage, and the cloud sync snapshot.</li>
+        <li><b>Google (Gemini)</b> — analysing meal photos and descriptions, only when you use that feature.</li>
+        <li><b>Firebase Crashlytics</b> — crash reports (scrubbed of health values).</li>
+        <li><b>Firebase Cloud Messaging</b> — delivering low-glucose alerts to your guardians.</li>
+        <li><b>Google Play Billing</b> — processing and verifying your subscription.</li>
+        <li><b>Cloudflare</b> — serving and protecting our domain.</li>
+      </ul>
+      <p class="muted">Some of these services operate servers outside Egypt, so using the app involves a cross-border transfer of data.</p>
 
       <h3>Your rights — account &amp; data deletion</h3>
       <p>You can <b>permanently delete your account and all data</b> in-app: Settings → Account → "Delete account &amp; data". This erases your data from the device and the server and cannot be undone. Or email our support.</p>
