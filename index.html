@@ -4,6 +4,7 @@
   انسخ هذا الملف باسم index.html إلى مستودع day1t1-privacy → يظهر على:
   https://day1t1.github.io/day1t1-privacy/
   ⚖️ مسودة — راجعها مع محامٍ قبل الاعتماد النهائي. حدّث [البريد] و[التاريخ].
+  المصدر: docs/قانوني/سياسة_الخصوصية.md في مستودع التطبيق (لإصدار 1.8.53).
 -->
 <html lang="ar" dir="rtl">
 <head>
@@ -30,14 +31,17 @@
     .toggle a { color:var(--accent); text-decoration:none; font-weight:700; border:1px solid var(--border); padding:8px 16px; border-radius:20px; }
     footer { text-align:center; color:var(--muted); font-size:12px; margin-top:28px; }
     hr { border:none; border-top:1px solid var(--border); margin:26px 0; }
+    a { color:var(--accent); }
     table { width:100%; border-collapse:collapse; margin-top:10px; font-size:14px; }
     th, td { border:1px solid var(--border); padding:9px 11px; text-align:start; vertical-align:top; }
     th { background:rgba(18,182,168,.10); color:var(--accent); font-weight:700; }
     td:first-child { width:38%; font-weight:600; }
+    table.proc td:first-child { width:26%; }
     @media (max-width:560px) {
       table, th, td { font-size:13px; }
       th, td { padding:7px 8px; }
       td:first-child { width:42%; }
+      table.proc td:first-child { width:30%; }
     }
   </style>
 </head>
@@ -46,44 +50,58 @@
     <header>
       <div class="logo">Day1T1</div>
       <div class="sub">سياسة الخصوصية · Privacy Policy</div>
-      <div class="sub muted">آخر تحديث: 2026-10-26 · التواصل: support@day1t1.com</div>
+      <div class="sub muted">آخر تحديث: 2026-11-01 (لإصدار 1.8.53) · التواصل: support@day1t1.com</div>
     </header>
 
-    <div class="toggle"><a href="#en">English ↓</a> <a href="./terms.html">شروط الخدمة · Terms →</a></div>
+    <div class="toggle"><a href="#en">English ↓</a> <a href="./terms.html">شروط الخدمة · Terms →</a> <a href="./delete-account.html">حذف الحساب · Delete account →</a></div>
 
     <!-- ============ العربية ============ -->
     <div class="card">
       <h2>مقدمة</h2>
-      <p>تطبيق <b>Day1T1</b> أداة مساعِدة للمصابين بالسكري من النوع الأول ولمن يرعاهم. نحترم خصوصيتك، ونوضّح هنا البيانات التي نجمعها وكيف نستخدمها ونحميها.</p>
+      <p>تطبيق <b>Day1T1</b> أداة استشاريّة يستعملها المصابون بالسكري من النوع الأول وعائلاتهم لتسجيل قراءاتهم ومتابعتها. نوضّح هنا ما نجمعه، ولماذا، ومع من نشاركه، وكيف تحذفه.</p>
 
       <h3>البيانات التي نجمعها</h3>
       <ul>
-        <li><b>بيانات الحساب:</b> بريدك الإلكتروني، وكلمة سرّك إن اخترت الدخول بها (يحفظها مزوّد المصادقة مُجزّأةً، لا نصًّا)، أو رمز تحقّق يصل بريدك.</li>
-        <li><b>بياناتك الصحية التي تُدخلها أو تستوردها:</b> قراءات السكر (يدويًا، أو من جهاز قياس بالبلوتوث، أو من حسّاس مستمرّ تربطه، أو من ملف حسّاس)، الوجبات والكربوهيدرات، جرعات الإنسولين وأقلامه ومواضع الحقن، التمارين، حالات الهبوط، تقييمات الحُماض الكيتوني وملاحظات متابعتها، التحاليل، الأدوية، الفيتامينات، الماء والنوم والمزاج، المواعيد، الملاحظات.</li>
-        <li><b>بيانات من ترعاهم:</b> إن أنشأت بروفايلًا لابنك أو لأحد والديك فبياناته الصحية تُحفظ كبياناتك. وإن ربطت بريده ببروفايله نحفظ بريده لننشئ له حسابه.</li>
-        <li><b>المرافقون:</b> بريد من تدعوه مرافقًا، لتظهر له الدعوة في تطبيقه. ويصله آخر قراءة لك (ومنها أحدث قراءة لحسّاسك إن ربطته)، وتنبيه الهبوط (ومنه الهبوط الذي يقرؤه حسّاسك والتطبيق مفتوح)، وتنبيه خطر الحُماض الكيتوني، وتنبيه الارتفاع الشديد والوجبات عالية الكربوهيدرات إن اخترتهما. يحمل التنبيه اسمك كما في ملفك، وقيمة السكر في تنبيه الهبوط، وفي تنبيه خطر الحماض أن التقييم «خطر» وآخر قيمة كيتون إن قستها. ونحفظ رمز إشعارات جهازه لإيصالها.</li>
-        <li><b>جهاز القياس بالبلوتوث (عند ربطه):</b> نقرأ من الجهاز قراءاته ووقتها ونوعها فقط. رقمه التسلسلي يُجزّأ (hash) على هاتفك، ولا يُحفظ منه إلا هذا الأثر داخل معرّفات القراءات لمنع تكرارها. لا يُستعمل البلوتوث إلا لقراءة جهاز القياس. وعلى أندرويد 11 وما قبله يشترط النظام إذن الموقع لأيّ بحثٍ بالبلوتوث، فيُطلب لذلك وحده — ولا يقرأ التطبيق موقعك ولا يجمعه. وقائمة الأجهزة التي أقرنتها (اسم الجهاز وطرازه ومعرّفه في البلوتوث) تُحفظ على هذا الهاتف وحده ولا تُزامَن، أما قراءات الجهاز فتدخل سجلّك وتُزامَن كباقي بياناتك الصحية.</li>
-        <li><b>الحسّاس المستمرّ (CGM) عند ربطه:</b> إن ربطت حساب LibreLinkUp أو Dexcom Share أو موقع Nightscout، تبقى بيانات دخوله على هاتفك وحده: كلمة السر أو رمز الوصول في التخزين الآمن للنظام (Keychain على الآيفون، وKeystore على أندرويد)، والبريد أو اسم المستخدم وعنوان الموقع في إعدادات التطبيق على الهاتف. يرسلها هاتفك مباشرةً إلى ذلك المزوّد وحده (Abbott أو Dexcom أو موقع Nightscout الذي تحدّده) لجلب قراءاتك، ولا تمرّ بخادمنا، ولا تدخل نسخة المزامنة، ولا تُرسل إلى أي طرف آخر. ومع xDrip+ أو Juggluco على أندرويد تُقرأ القراءات من ذلك التطبيق على هاتفك نفسه دون إنترنت.</li>
+        <li><b>بيانات الحساب:</b> بريدك الإلكتروني (للدخول برمز يصل بريدك أو بكلمة سرّ)، وكلمة سرّك إن أنشأتها (يحفظها مزوّد المصادقة مُجزّأةً، لا نصًّا، ولا نراها).</li>
+        <li><b>ملفّك الشخصيّ:</b> الاسم، والهاتف، وتاريخ الميلاد، والمدينة والدولة، والجنس، والمهنة، والوزن والطول، وعمر التشخيص، وحالات صحّيّة أخرى إن أدخلتها، ونوع العلاج وجرعات الإنسولين، ونسبة الكربوهيدرات ومعامل الحساسية وحدود الأهداف كما أدخلتها. و<b>صورة البروفايل</b> إن اخترت واحدة: تُصغَّر على هاتفك ثمّ تُحفظ داخل ملفّك الشخصيّ، فتُزامَن مع نسختك على خادمنا وتُستعاد معها.</li>
+        <li><b>بياناتك الصحية التي تُدخلها أو تستوردها:</b> قراءات السكر (يدويًا، أو من جهاز قياس بالبلوتوث، أو من حسّاس مستمرّ تربطه، أو من ملف حسّاس)، الوجبات والكربوهيدرات، جرعات الإنسولين وأقلامه ومواضع الحقن، التمارين، حالات الهبوط، تقييمات الحُماض الكيتوني ووضع المرض وملاحظات متابعتها، التحاليل، الأدوية، الفيتامينات، الماء والنوم والمزاج، المواعيد، الملاحظات.</li>
+        <li><b>بيانات من ترعاهم:</b> إن أنشأت بروفايلًا لابنك أو لأحد والديك فاسمه وبياناته الصحية تُحفظ وتُزامَن كبياناتك، وقائمة بروفايلاتك (الأسماء) جزءٌ من نسختك على خادمنا. وإن ربطت بريده ببروفايله (Pro Plus) نرسل إلى ذلك البريد رسالة موافقة فيها اسمك وبريدك ورمزٌ من ستّة أرقام؛ وقبل تأكيد الرمز لا نحفظ إلا بصمةً (hash) للبريد وللرمز، تُحذف بعد يوم. وبعد التأكيد يُنشأ له حساب بذلك البريد ويُربط ببروفايله.</li>
+        <li><b>المرافقون:</b> بريد من تدعوه مرافقًا، نحفظه في الدعوة لتظهر له في تطبيقه حين يدخل بذلك البريد — لا نرسل إليه رسالة بريد بالدعوة. وبعد قبوله يبقى بريده في رابط المتابعة لترى من يتابعك. ويرى المرافق اسمك كما في ملفّك، وآخر قراءة لك (ومنها أحدث قراءة لحسّاسك إن ربطته)، وتصله تنبيهات الهبوط (ومنها الهبوط الذي يقرؤه حسّاسك والتطبيق مفتوح) وخطر الحُماض الكيتوني، وتنبيه الارتفاع الشديد والوجبات عالية الكربوهيدرات إن اخترتهما. يحمل التنبيه اسمك، وقيمة السكر في تنبيه الهبوط، وفي تنبيه خطر الحماض أن التقييم «خطر» وآخر قيمة كيتون إن قستها. ونحفظ رمز إشعارات جهازه لإيصالها.</li>
+        <li><b>جهاز القياس بالبلوتوث (عند ربطه):</b> نقرأ من الجهاز قراءاته ووقتها ونوعها فقط. رقمه التسلسلي يُجزّأ (hash) على هاتفك، ولا يُحفظ منه إلا هذا الأثر داخل معرّفات القراءات لمنع تكرارها. لا يُرسل التطبيق للجهاز أوامر، ولا يُستعمل البلوتوث إلا لقراءة جهاز القياس. وعلى أندرويد 11 وما قبله يشترط النظام إذن الموقع لأيّ بحثٍ بالبلوتوث، فيُطلب لذلك وحده — ولا يقرأ التطبيق موقعك ولا يجمعه. وقائمة الأجهزة التي أقرنتها (اسم الجهاز وطرازه ومعرّفه في البلوتوث) تُحفظ على هذا الهاتف وحده ولا تُزامَن، أما قراءات الجهاز فتدخل سجلّك وتُزامَن كباقي بياناتك الصحية.</li>
+        <li><b>الحسّاس المستمرّ (CGM) عند ربطه (Pro Plus):</b> يقرأ التطبيق قراءاتك من <b>موقع Nightscout الخاصّ بك</b>، أو من <b>ملف CSV</b> تصدّره أنت من خدمة حسّاسك (مثل LibreView أو Dexcom Clarity) وتختاره على هاتفك. عنوان موقعك ورمز الوصول إليه يبقيان على هاتفك وحده: الرمز في التخزين الآمن للنظام (Keychain على الآيفون، وKeystore على أندرويد)، والعنوان في إعدادات التطبيق على الهاتف. يرسلهما هاتفك مباشرةً إلى موقعك وحده لجلب قراءاتك، ولا يمرّان بخادمنا، ولا يدخلان نسخة المزامنة، ولا يُرسلان إلى أي طرف آخر. ولا يتّصل التطبيق بخدمات Abbott ولا Dexcom.</li>
         <li><b>قراءات الحسّاس:</b> تُحفظ في قاعدة منفصلة على هاتفك لمدة 14 يومًا، لكل بروفايل قراءاته، ولا تدخل نسخة المزامنة. ويجلبها التطبيق وهو مفتوح فقط. وإن كان لك مرافق، يرسل التطبيق إلى خادمنا أحدث قراءةٍ للحسّاس واتجاهها في لقطة الحالة التي يراها مرافقوك، مرّةً كل خمس دقائق على الأكثر ما دامت القراءات تصل، وتحلّ كل لقطةٍ محلّ سابقتها. وإن قرأ الحسّاس هبوطًا فأُرسل تنبيهٌ إلى مرافقك، تُحفظ قيمة السكر في سجلّ التنبيهات. أما ما يدخل سجلّك منها، أي القراءة التي تحفظها عند تسجيل قياس أو وجبة أو تمرين أو هبوط، والأيام التي تستوردها من ملف CSV، فيصير من بياناتك الصحية ويُزامَن مع حسابك كغيره.</li>
-        <li><b>بيانات تحليل الوجبات والتحاليل (عند استخدامها):</b> صور الطعام أو وصفه أو الباركود، وصور التحاليل أو ملفات PDF التي ترفعها.</li>
-        <li><b>منع تكرار التجربة المجانية:</b> أثرٌ أحادي الاتجاه (SHA-256 بملح) لمعرّف جهازك ولبريدك، ومعه عدد طلبات التجربة المستعملة. ولنتأكّد أن الجهاز حقيقي نرسل رمزًا يولّده هاتفك إلى Google Play Integrity أو Apple DeviceCheck.</li>
+        <li><b>ما ترسله للميزات الذكيّة (بعد موافقتك):</b> صور الطعام أو وصفه، وصور التحاليل أو ملفات PDF التي ترفعها، وأسئلتك للمساعد — انظر «الذكاء الاصطناعيّ» أدناه. تمرّ عبر خادمنا ولا نحفظها.</li>
+        <li><b>الباركود:</b> رقم الباركود الذي تمسحه، يرسله هاتفك إلى Open Food Facts وحدها.</li>
+        <li><b>منع تكرار التجربة المجانية:</b> أثرٌ أحادي الاتجاه (SHA-256 بملح) لمعرّف جهازك ولبريدك، ومعه عدد طلبات التجربة المستعملة. ولنتأكّد أن الجهاز حقيقي نرسل رمزًا يولّده هاتفك إلى Google Play Integrity أو Apple DeviceCheck. ولنحدّ من فتح حسابات تجربة كثيرة من شبكة واحدة نحفظ أثرًا مُجزّأً بملحٍ يتغيّر كل يوم لعنوان شبكتك (لا العنوان نفسه)، يُحذف بعد يومين.</li>
         <li><b>عدّاد طلبات الذكاء الاصطناعي:</b> كم طلبًا استعملت، لتطبيق حدّ خطتك.</li>
-        <li><b>الاشتراك (عند الشراء):</b> إيصال الشراء الذي يصلنا من Google Play أو App Store (المنتج، ورمز الشراء ومعرّف المعاملة، وتاريخ الانتهاء)، وإشعارات المتجر بالتجديد أو الإلغاء أو الاسترداد، وخطتك الحالية وتاريخ انتهائها، لنفعّل اشتراكك ونتحقّق منه. لا تصلنا بيانات بطاقتك ولا طريقة دفعك.</li>
+        <li><b>الاشتراك (عند الشراء):</b> إيصال الشراء الذي يصلنا من Google Play أو App Store (المنتج، ورمز الشراء وبصمته ومعرّف المعاملة أو رقم الطلب، والمنصّة، وتاريخ الانتهاء)، وإشعارات المتجر بالتجديد أو الإلغاء أو الاسترداد، وخطتك الحالية وتاريخ انتهائها، لنفعّل اشتراكك ونتحقّق منه ونمنع إعادة استعمال الإيصال. لا تصلنا بيانات بطاقتك ولا طريقة دفعك.</li>
         <li><b>آخر يومٍ فتحت فيه التطبيق:</b> مرّةً في اليوم يسجّل التطبيق على خادمنا تاريخ اليوم (دون الساعة)، وهل أكملت الإعداد (ضبط نسبة الكربوهيدرات). نستعمله وحده لنعرف كم مستخدمًا ما زال يستعمل التطبيق، ولا يُسجَّل ما فعلته فيه ولا مكانك.</li>
+        <li><b>تقارير الأعطال:</b> حين يتعطّل التطبيق يُرسل تقريرًا تقنيًّا إلى Firebase Crashlytics بعد حذف البريد والمعرّفات والقيم الصحية منه.</li>
         <li><b>الإدخال الصوتي (عند استخدامه):</b> تحوّل خدمة التعرّف على الكلام في هاتفك (من Apple أو Google) صوتك إلى نص. لا يصلنا الصوت ولا نحفظه.</li>
-        <li><b>الإشعارات:</b> لجدولة التذكيرات محليًا. وما دمت مسجّلًا الدخول نحفظ رمز إشعارات جهازك ونوع نظامه ولغة التطبيق، لتصلك بلغتك التنبيهات الموجّهة إليك، مثل تنبيهات من تتابعه كمرافق.</li>
+        <li><b>الإشعارات:</b> تُجدول التذكيرات على جهازك. وما دمت مسجّلًا الدخول نحفظ رمز إشعارات جهازك ونوع نظامه ولغة التطبيق، لتصلك بلغتك التنبيهات الموجّهة إليك، مثل تنبيهات من تتابعه كمرافق.</li>
       </ul>
 
       <h3>كيف نستخدم البيانات</h3>
-      <p>لتشغيل ميزات التطبيق: التسجيل، الحسابات الاستشارية، التذكيرات، التقارير، المزامنة بين أجهزتك، المرافقين وإدارة البروفايلات، والتحليل بالذكاء الاصطناعي؛ ولمنع تكرار التجربة المجانية، ولنعرف كم مستخدمًا ما زال يستعمل التطبيق (تاريخ آخر فتح فقط). <b>لا نبيع بياناتك ولا نستخدمها للإعلانات.</b></p>
+      <p>لتشغيل ميزات التطبيق: التسجيل، الحسابات الاستشارية، التذكيرات، التقارير، المزامنة بين أجهزتك، المرافقين وإدارة البروفايلات، والميزات الذكيّة التي تطلبها؛ ولمنع تكرار التجربة المجانية، ولنعرف كم مستخدمًا ما زال يستعمل التطبيق (تاريخ آخر فتح فقط). <b>لا نبيع بياناتك، ولا نستخدمها للإعلانات، ولا نعرض إعلانات.</b></p>
 
       <h3>أين تُخزَّن البيانات</h3>
       <ul>
-        <li><b>محليًا على جهازك</b> (قاعدة بيانات على الجهاز) — الأساس.</li>
-        <li><b>على الخادم (Supabase):</b> بيانات الحساب والمصادقة، ونسخةٌ من بياناتك الصحية في حسابك للمزامنة بين أجهزتك واستعادتها على هاتف جديد. لا يصل إليها غيرك إلا من تختاره: وليّ أمرٍ ربط بروفايلك ببريدك يرى سجلّك ويسجّل فيه ما دامت الإدارة قائمة، ومرافقٌ دعوته يرى آخر قراءة لك والتنبيهات التي تسمح بها فقط.</li>
-        <li>ما ترسله لميزات الذكاء الاصطناعي يمرّ عبر خادمنا إلى مزوّد الذكاء الاصطناعي لتنفيذ طلبك وحده.</li>
-        <li>النسخ الاحتياطية التي تصدّرها يمكن تشفيرها بكلمة سر (AES-256).</li>
+        <li><b>محليًا على جهازك</b> (قاعدة بيانات على الجهاز).</li>
+        <li><b>على خادمنا (Supabase):</b> ما دمت مسجّل الدخول <b>يُزامَن سجلّك الصحّيّ وملفّك الشخصيّ — ومنه اسمك وصورة البروفايل إن وضعتها — تلقائيًّا مع حسابك</b>، ومعهما بروفايلات من ترعاهم وأسماؤها وما أكّدته من قراءات الحسّاس، لتعود بياناتك على هاتف جديد. وكذلك بيانات الحساب والاشتراك ووضع المرافق (ومنه اسمك في لقطة الحالة، وبريد من دعوته أو ربطت بريده). لا يصل إليها غيرك إلا من تختاره: وليّ أمرٍ ربط بروفايلك ببريدك يرى سجلّك ويسجّل فيه ما دامت الإدارة قائمة، ومرافقٌ دعوته يرى آخر قراءة لك والتنبيهات التي تسمح بها فقط. التخزين مشفّر على الخادم، والنقل عبر HTTPS؛ لكنه ليس تشفيرًا بكلمة سرّك.</li>
+        <li>ما ترسله لميزات الذكاء الاصطناعي يمرّ عبر خادمنا إلى Google Gemini لتنفيذ طلبك وحده، ولا يُحفظ على خادمنا.</li>
+        <li>ملفّ النسخة الاحتياطية الذي تصدّره بنفسك يمكن حمايته بكلمة سر (AES-256-GCM).</li>
       </ul>
+
+      <h3>الذكاء الاصطناعيّ (Google Gemini)</h3>
+      <p>الميزات الذكيّة — تحليل صورة الوجبة أو وصفها، وقراءة ورقة التحاليل (صورة أو PDF)، والمساعد، والملخّص الذكي، وشرح تحليل الأنماط، وخطّة الأكل — تُرسل عبر خادمنا إلى خدمة <b>Gemini من Google</b>:</p>
+      <ul>
+        <li>صورة الوجبة أو وصفها ووزنها؛</li>
+        <li>صورة ورقة التحاليل أو ملفّها كما هو، <b>وقد يظهر فيها اسمك ورقم ملفّك</b>؛</li>
+        <li>سؤالك للمساعد وآخر رسائل المحادثة، مع ملخّص رقميّ لبياناتك (متوسّط السكر، الوقت في النطاق، عدد الهبوط والارتفاع، الإنسولين النشط، أسماء أدويتك، آخر تحاليلك)؛</li>
+        <li>الأرقام المجمّعة التي يُبنى عليها الملخّص، ونتائج تحليل الأنماط المحسوبة على هاتفك (لا قراءاتك نفسها) حين تطلب شرحها؛</li>
+        <li>ولخطّة الأكل: العمر والجنس والوزن والطول والهدف، والحالات الصحّيّة الأخرى التي أدخلتها في ملفّك، وملخّص قراءات 14 يومًا (المتوسّط وعدد القراءات والهبوط والارتفاع) — <b>بلا جرعات إنسولين</b>.</li>
+      </ul>
+      <p><b>لا يُرسل شيء منها قبل أن توافق</b> في شاشة تظهر مرّةً قبل أوّل طلب، ويمكنك تغيير قرارك في أي وقت من الإعدادات ← التطبيق ← «الميزات الذكيّة وبياناتك». الصور والملفّات والنصوص تُرسل لتنفيذ الطلب وحده ثمّ تُهمل، <b>ولا نحفظها على خوادمنا</b>؛ والقيم التي تحفظها أنت من النتيجة تصير من بياناتك الصحية. نستعمل خدمة Google المدفوعة، التي لا تستعمل فيها Google هذه البيانات لتدريب نماذجها.</p>
 
       <h3>مدة الاحتفاظ بالبيانات</h3>
       <p>نحتفظ بكل نوع من البيانات للمدة الموضّحة أدناه فقط:</p>
@@ -91,10 +109,10 @@
         <tr><th>البيانات</th><th>مدة الاحتفاظ</th></tr>
         <tr>
           <td>بياناتك الصحية على جهازك</td>
-          <td>تبقى حتى تحذفها أنت، أو تحذف حسابك، أو تحذف التطبيق. لا نحذف شيئاً تلقائياً من جهازك.</td>
+          <td>تبقى حتى تحذفها أنت، أو تحذف حسابك، أو تحذف التطبيق. لا نحذف شيئاً تلقائياً من سجلّك على جهازك.</td>
         </tr>
         <tr>
-          <td>النسخة السحابية للمزامنة</td>
+          <td>النسخة السحابية للمزامنة (سجلّك الصحّيّ، وملفّك الشخصيّ واسمك وصورة البروفايل، وبروفايلات من ترعاهم)</td>
           <td>تبقى ما دام حسابك قائماً، ويُستبدل محتواها عند كل تغيير. تُحذف نهائياً عند حذف الحساب.</td>
         </tr>
         <tr>
@@ -102,23 +120,32 @@
           <td>ما دام حسابك قائماً. تُحذف نهائياً عند حذف الحساب.</td>
         </tr>
         <tr>
-          <td>صور الوجبات وأوصافها، وصور التحاليل وملفاتها، وما يُرسَل لشرح تحليل الأنماط</td>
-          <td><b>لا نخزّنها.</b> تُرسل لمزوّد الذكاء الاصطناعي لتنفيذ الطلب وحده، ولا تُحفظ على خوادمنا. (القيم التي تحفظها أنت من نتيجة التحليل تصير من بياناتك الصحية.)</td>
+          <td>صور الوجبات وأوصافها، وصور التحاليل وملفاتها، وأسئلة المساعد، وما يُرسَل للملخّص وتحليل الأنماط وخطّة الأكل</td>
+          <td><b>لا نخزّنها.</b> تُرسل إلى Google Gemini لتنفيذ الطلب وحده، ولا تُحفظ على خوادمنا. (القيم التي تحفظها أنت من نتيجة التحليل تصير من بياناتك الصحية.)</td>
         </tr>
         <tr>
-          <td>رابط مشاركة التقرير مع الطبيب</td>
-          <td>يتوقّف عن العمل بعد <b>٧ أيام</b> من إنشائه، أو فور إلغائك له.</td>
+          <td>رابط مشاركة التقرير مع الطبيب (ونسخة التقرير التي يفتحها، وفيها اسمك وعمرك وقراءاتك)</td>
+          <td>يتوقّف الرابط عن العمل بعد <b>٧ أيام</b> من إنشائه، أو فور إيقافك له من التطبيق. وإيقافه يحذف نسخة التقرير من خادمنا في الحال؛ وإن تركته ينتهي حُذفت النسخة تلقائياً بعد <b>30 يوماً</b> من انتهائه.</td>
         </tr>
         <tr>
           <td>رمز دعوة المرافق</td>
           <td>ينتهي بعد <b>٢٤ ساعة</b> أو عند استعماله مرّة واحدة، أيّهما أسبق.</td>
         </tr>
         <tr>
-          <td>دعوة المرافق بالبريد</td>
-          <td>تنتهي بعد <b>٧ أيام</b> إن لم يقبلها، وتُحذف مع حسابك.</td>
+          <td>دعوة المرافق بالبريد (وفيها البريد الذي كتبته)</td>
+          <!-- TODO Omar: لا قاعدة حذف لـguardian_email_invites في supabase/rebuild — الدعوة تُعلَّم (responded_at) عند القبول أو الرفض أو الإلغاء ولا تُحذف حتى يُحذف حساب الداعي. لو حابب تحذفها بعد مدة (مثلاً 30 يوم من الرد أو الانتهاء) ضيف سطر في privacy_retention_tick وعدّل الجملة دي. -->
+          <td>تنتهي بعد <b>٧ أيام</b> إن لم يُجب عنها. ويبقى سجلّ الدعوة — بالبريد الذي كتبته وهل قُبلت — على خادمنا حتى تحذف حسابك، ثم يُحذف معه.</td>
         </tr>
         <tr>
-          <td>لقطة الحالة التي يراها مرافقوك</td>
+          <td>رابط المتابعة مع مرافقك (وفيه بريده)</td>
+          <td>ما دام حسابك وحسابه قائمَين. يُحذف عند حذف أيٍّ من الحسابين.</td>
+        </tr>
+        <tr>
+          <td>رمز ربط بريدٍ ببروفايل</td>
+          <td>يُحفظ بصمةً (hash) لا نصًّا، وينتهي بعد 15 دقيقة، ويُحذف هو وبصمة البريد بعد <b>يوم</b>.</td>
+        </tr>
+        <tr>
+          <td>لقطة الحالة التي يراها مرافقوك (اسمك وآخر قراءة)</td>
           <td>صفّ واحد يُستبدل عند كل تحديث — لا يُبنى منه تاريخ. يُحذف عند حذف الحساب.</td>
         </tr>
         <tr>
@@ -127,7 +154,7 @@
         </tr>
         <tr>
           <td>بيانات دخول الحسّاس وقراءاته</td>
-          <td>بيانات الدخول على هاتفك فقط ولا تصل إلى خوادمنا، والقراءات على هاتفك ولا تدخل نسخة المزامنة (أحدث قراءةٍ يراها مرافقك تحفظها لقطة الحالة أعلاه). ويُحذف منها ما تجاوز <b>14 يومًا</b> كلما وصلت قراءات جديدة. وفصل الحسّاس من التطبيق، أو حذف حسابك، أو الدخول بحسابٍ آخر على الهاتف، يحذف بيانات دخوله وقراءاته من الهاتف.</td>
+          <td>عنوان موقع Nightscout ورمزه على هاتفك فقط ولا يصلان إلى خوادمنا، والقراءات على هاتفك ولا تدخل نسخة المزامنة (أحدث قراءةٍ يراها مرافقك تحفظها لقطة الحالة أعلاه). ويُحذف منها ما تجاوز <b>14 يومًا</b> كلما وصلت قراءات جديدة. وفصل الحسّاس من التطبيق، أو حذف حسابك، أو الدخول بحسابٍ آخر على الهاتف، يحذف بيانات دخوله وقراءاته من الهاتف.</td>
         </tr>
         <tr>
           <td>قائمة أجهزة القياس المقترنة</td>
@@ -140,6 +167,10 @@
         <tr>
           <td>إيصالات الاشتراك وخطتك</td>
           <td>ما دام حسابك قائماً. تُحذف عند حذف الحساب.</td>
+        </tr>
+        <tr>
+          <td>إشعارات المتجر عن عملية شراء (نوع الإشعار ووقته وبصمة رمز الشراء أو معرّف المعاملة — بلا بريد ولا بيانات صحية)</td>
+          <td>تُحذف تلقائياً بعد <b>13 شهراً</b> من وصولها، ولو بعد حذف الحساب.</td>
         </tr>
         <tr>
           <td>أثر الإيصال بعد حذف الحساب</td>
@@ -155,35 +186,54 @@
         </tr>
         <tr>
           <td>أثر الجهاز والبريد لمنع تكرار التجربة</td>
-          <td><b>يبقى بعد حذف الحساب</b>، لأن غرضه وحده منع إنشاء حسابٍ جديد لتجربةٍ ثانية. لا يُربط بحسابك ولا ببياناتك، ولا يمكن استرجاع البريد أو المعرّف منه.</td>
+          <td><b>يبقى بعد حذف الحساب</b>، لأن غرضه وحده منع إنشاء حسابٍ جديد لتجربةٍ ثانية، ثم يُحذف تلقائياً بعد <b>24 شهراً</b> من أوّل تجربة. لا يُربط بحسابك ولا ببياناتك، ولا يمكن استرجاع البريد أو المعرّف منه.</td>
+        </tr>
+        <tr>
+          <td>أثر عنوان الشبكة لحدّ حسابات التجربة</td>
+          <td>يُحذف بعد <b>يومين</b>.</td>
+        </tr>
+        <tr>
+          <td>أثر مُجزّأ لبريدٍ ارتدّت عنه رسائلنا</td>
+          <!-- TODO Omar: لا قاعدة حذف لـemail_bounces في supabase/rebuild (الحكم نفسه ينظر لآخر 30 يوم فقط). لو حابب مدة محددة ضيفها في privacy_retention_tick وعدّل الجملة. -->
+          <td>يبقى، لأن غرضه وحده ألّا نعيد إرسال رموز الدخول إلى عنوانٍ لا يستقبلها. لا يحمل البريد نفسه ولا يمكن استرجاعه منه.</td>
         </tr>
         <tr>
           <td>علامة Apple DeviceCheck (على الآيفون)</td>
           <td>تحفظ Apple على خوادمها علامةً لهذا الجهاز تقول إنه استعمل التجربة، وتبقى بعد حذف التطبيق. لا تحمل أي بيان شخصي.</td>
         </tr>
       </table>
-      <p class="muted">عند حذف حسابك تُمحى كل الصفوف المرتبطة به من خوادمنا في العملية نفسها — لا تبقى نسخة معلّقة. ويبقى أثر منع تكرار التجربة وأثر الإيصال الموضّحان أعلاه فقط، ولا يحملان بريدك ولا بياناتك الصحية.</p>
+      <p class="muted">عند حذف حسابك تُمحى كل الصفوف المرتبطة به من خوادمنا في العملية نفسها، وتُحذف ملفات نسخك السحابية خلال دقائق. ويبقى فقط ما وُصف أعلاه بأنه يبقى: أثر منع تكرار التجربة، وأثر الإيصال، وإشعارات المتجر حتى تنتهي مدّتها، وأثر البريد المرتدّ — ولا يحمل شيءٌ منها بريدك ولا بياناتك الصحية. وما يحتفظ به المتجر (Google Play أو App Store) عن مشترياتك تحكمه سياسته.</p>
 
-      <h3>المشاركة مع أطراف ثالثة</h3>
-      <p>لا نبيع بياناتك ولا نشاركها مع أي جهة غير المذكورة هنا، وكلٌّ منها لغرضٍ واحد محدّد:</p>
-      <ul>
-        <li><b>Supabase</b> — المصادقة، وتخزين الحساب ونسخة المزامنة، والمزامنة اللحظية بين أجهزتك.</li>
-        <li><b>Google (Gemini)</b> — يعالج ما ترسله إلى ميزات الذكاء الاصطناعي، وعند استخدامك لها فقط: صور الوجبات وأوصافها؛ وأسئلتك في المحادثة ومعها ملخّص أرقامك (متوسطات السكر والجرعات وأسماء أدويتك)؛ وصور التحاليل أو ملفات PDF التي ترفعها، وقد تحمل اسمك كما هو مطبوع عليها؛ وملخّص أرقامك للمدّة حين تطلب الملخّص الذكي؛ ونتائج تحليل الأنماط المحسوبة على هاتفك — لا قراءاتك نفسها — حين تطلب شرحها؛ وبيانات خطة الوجبات.</li>
-        <li><b>Resend</b> — إيصال رسائل البريد التي تحمل رموز الدخول والتحقّق.</li>
-        <li><b>Firebase Crashlytics</b> — تقارير الأعطال (مُنقّاة من القيم الصحية).</li>
-        <li><b>Firebase Cloud Messaging</b> — إيصال تنبيهات المرافقين إلى أجهزتهم (وعلى الآيفون عبر خدمة الإشعارات من Apple).</li>
-        <li><b>Google Play Integrity</b> و<b>Apple DeviceCheck</b> — التأكّد من أن الجهاز الذي يبدأ التجربة المجانية جهازٌ حقيقي.</li>
-        <li><b>Google Play Billing</b> أو <b>Apple App Store</b> — معالجة الاشتراك والتحقّق منه، بحسب المتجر الذي نزّلت منه التطبيق.</li>
-        <li><b>Cloudflare</b> — تشغيل نطاقنا وحمايته.</li>
-        <li><b>Open Food Facts</b> — حين تمسح باركود منتج، يرسل هاتفك رقم الباركود وحده مباشرةً إلى قاعدة Open Food Facts المفتوحة لجلب بيانات المنتج الغذائية، ولا نرسل إليها شيئًا آخر من بياناتك.</li>
-        <li><b>الخدمات التي تربطها أنت:</b> LibreLinkUp (من Abbott) وDexcom Share (من Dexcom) وموقع Nightscout الخاص بك. يتصل بها هاتفك مباشرةً ببيانات دخولك لجلب قراءاتك فقط، ولا نرسل إليها شيئًا من بياناتك، ويخضع ما بينك وبينها لسياسة خصوصيتها. وDay1T1 غير تابع لأيٍّ منها، وتديرها شركاتها، فقد يتوقف الربط إن غيّرت إحداها خدمتها.</li>
-      </ul>
+      <h3>المشاركة مع أطراف ثالثة (المعالِجون)</h3>
+      <p>لا نبيع بياناتك ولا نشاركها مع أي جهة غير المذكورة هنا، وكلٌّ منها لغرضٍ محدّد:</p>
+      <table class="proc">
+        <tr><th>الجهة</th><th>لماذا</th><th>ما يصلها</th></tr>
+        <tr><td>Supabase</td><td>الخادم والمصادقة والمزامنة والتخزين</td><td>كلّ ما يُزامَن ويُحفظ على خادمنا (أعلاه)</td></tr>
+        <tr><td>Google — Gemini</td><td>الميزات الذكيّة، بعد موافقتك</td><td>ما في قسم «الذكاء الاصطناعيّ»</td></tr>
+        <tr><td>Google — Firebase (Crashlytics، Cloud Messaging)</td><td>تقارير الأعطال المنقّاة، وإيصال التنبيهات (وعلى الآيفون عبر خدمة الإشعارات من Apple)</td><td>تقرير العطل بلا بريد ولا قيم صحية؛ رمز الجهاز ونصّ التنبيه</td></tr>
+        <tr><td>Google Play (الفوترة، Play Integrity)</td><td>الشراء والتحقّق منه، والتأكّد أن الجهاز حقيقي للتجربة المجانية</td><td>رمز الشراء؛ رمز سلامة الجهاز</td></tr>
+        <tr><td>Apple (App Store/StoreKit، DeviceCheck، APNs)</td><td>الشراء على الآيفون والتحقّق منه، والتجربة، والإشعارات</td><td>الإيصال؛ رمز الجهاز؛ رمز الإشعارات</td></tr>
+        <tr><td>Resend</td><td>رسائل البريد: رمز الدخول والتحقّق، ورسالة الموافقة حين تربط بريدًا ببروفايل، وإشعار صاحب البريد بالربط</td><td>بريد المرسَل إليه ونصّ الرسالة (ومنه اسمك وبريدك في رسالة الربط)</td></tr>
+        <tr><td>Open Food Facts</td><td>معرفة الطعام من الباركود</td><td>رقم الباركود وحده، من هاتفك مباشرةً</td></tr>
+        <!-- TODO Omar: «ما يصلها» لـCloudflare مكتوب عامًّا (بيانات الاتصال التقنية). أكّد إيه بالظبط بيمرّ عبر Cloudflare على day1t1.com (مثلاً صفحة تقرير الطبيب /r/ وسجلات الطلبات) قبل النشر. -->
+        <tr><td>Cloudflare</td><td>تشغيل نطاقنا وحمايته</td><td>بيانات الاتصال التقنية بنطاقنا</td></tr>
+        <tr><td>موقع Nightscout الخاصّ بك</td><td>قراءة حسّاسك</td><td>عنوانه ورمزه من هاتفك مباشرةً — لا يمرّ بخادمنا ولا نرسل إليه شيئًا من بياناتك؛ ويخضع لسياسة من يستضيفه</td></tr>
+        <tr><td>مرافقوك (إن دعوتهم)</td><td>متابعتك</td><td>اسمك، وآخر قراءة واتجاهها، والتنبيهات التي تسمح بها</td></tr>
+        <tr><td>طبيبك (إن أرسلت له رابطًا أو PDF)</td><td>التقرير</td><td>ما في التقرير، برابطٍ أو ملفٍّ تنشئه أنت</td></tr>
+      </table>
+      <p>ملفات CSV التي تصدّرها من LibreView (من Abbott) أو Dexcom Clarity (من Dexcom) تُقرأ على هاتفك، ولا يتصل التطبيق بتلك الخدمات. <b>Day1T1 غير تابع لـNightscout ولا Abbott ولا Dexcom</b>، والأسماء علامات تجارية لأصحابها. ولا نكشف بياناتك لغير من ذُكر إلا بحكمٍ قانونيّ ملزِم.</p>
       <p class="muted">تقع خوادم بعض هذه الخدمات خارج مصر، فيشمل استخدامك للتطبيق نقلاً للبيانات عبر الحدود.</p>
 
-      <h3>حقوقك — حذف الحساب والبيانات</h3>
-      <p>يمكنك <b>حذف حسابك وكل بياناتك نهائيًا</b> من داخل التطبيق: الإعدادات ← الحساب ← «حذف الحساب والبيانات». يمسح ذلك بياناتك من الجهاز ومن الخادم ولا يمكن التراجع عنه. أو تواصل معنا على بريد الدعم.</p>
+      <h3>الأطفال</h3>
+      <p>Day1T1 ليس موجّهًا للأطفال وحدهم. <b>صاحب الحساب يجب أن يكون في 16 من عمره أو أكثر.</b> يستطيع وليّ الأمر أن يتابع طفله في <b>بروفايل</b> داخل حسابه، أو أن يربط بريد طفله ببروفايله (Pro Plus) فيسجّل الطفل من هاتفه <b>بموافقة وليّ الأمر وتحت إشرافه</b>، ويرى وليّ الأمر ما يسجّله. ولوليّ الأمر أن يطلب حذف بيانات طفله في أي وقت عبر بريد الدعم، أو بحذف البروفايل أو الحساب.</p>
 
-      <div class="note">⚠️ <b>تنبيه طبي:</b> Day1T1 أداة استشارية لا تُغني عن الطبيب ولا تُصدر قرارات علاجية.</div>
+      <h3>حقوقك — حذف الحساب والبيانات</h3>
+      <p>يمكنك <b>حذف حسابك وكل بياناتك نهائيًا</b> من داخل التطبيق: الإعدادات ← <b>متقدّم</b> ← «حذف الحساب والبيانات». يمسح ذلك بياناتك من هاتفك ومن خادمنا ونسخ المزامنة، وبيانات الحسّاس على الهاتف، ولا يمكن التراجع عنه — إلا ما ذُكر أعلاه أنه يبقى. أو من <a href="./delete-account.html">صفحة حذف الحساب</a>، أو بمراسلتنا على بريد الدعم. ويمكنك حذف أي سجلّ دون حذف حسابك.</p>
+
+      <h3>التغييرات</h3>
+      <p>قد نحدّث هذه السياسة، وننشر التغيير على الرابط نفسه بتاريخه. وإن تغيّر ما يُرسل إلى الذكاء الاصطناعيّ أو لمن، نسألك الموافقة من جديد داخل التطبيق.</p>
+
+      <div class="note">⚠️ <b>تنبيه طبي:</b> Day1T1 أداة استشارية لا تُغني عن الطبيب ولا تُصدر قرارات علاجية. قراءات الحسّاس للعلم: إن خالفت ما تشعر به فتأكّد بوخزة إصبع قبل الجرعة.</div>
     </div>
 
     <hr />
@@ -191,36 +241,50 @@
     <!-- ============ English ============ -->
     <div class="card en" id="en">
       <h2>Introduction</h2>
-      <p><b>Day1T1</b> is a companion tool for people with Type 1 Diabetes and those who care for them. We respect your privacy and explain here what we collect, how we use it, and how we protect it.</p>
+      <p><b>Day1T1</b> is an advisory app that people with type 1 diabetes and their families use to log and follow their readings. This policy explains what we collect, why, who we share it with, and how to delete it.</p>
 
       <h3>Data we collect</h3>
       <ul>
-        <li><b>Account data:</b> your email address, and your password if you choose to sign in with one (the authentication provider stores it hashed, never in plain text), or a verification code sent to your email.</li>
-        <li><b>Health data you enter or import:</b> glucose readings (typed in, from a Bluetooth meter, from a continuous glucose sensor you connect, or from a sensor file), meals &amp; carbs, insulin doses, pens and injection sites, exercise, hypo events, DKA assessments and their follow-up notes, lab results, medications, vitamins, water, sleep and mood, appointments, notes.</li>
-        <li><b>Data about people you look after:</b> if you create a profile for your child or a parent, their health data is kept like yours. If you link their email to that profile, we keep the email to create their account.</li>
-        <li><b>Companions:</b> the email of someone you invite as a companion, so the invite appears in their app. They receive your latest reading (including your sensor's latest reading if you connect one), the low alert (including a low your sensor reads while the app is open), the DKA risk alert, and very-high and high-carb-meal alerts if you turn those on. An alert carries your name as it appears in your profile, the glucose value for a low, and for DKA risk the fact that the assessment was high-risk and your latest ketone value if you measured one. We keep their device's notification token to deliver them.</li>
-        <li><b>Bluetooth meter (when you connect one):</b> we read only its readings, their times and their type. The meter's serial number is hashed on your phone, and only that hash is kept, inside reading ids, to avoid duplicates. Bluetooth is used only to read the meter. On Android 11 and below the system requires the location permission for any Bluetooth scan, so it is asked for that alone — the app never reads or collects your location. The list of meters you have paired (the meter's name, model and Bluetooth identifier) is kept on this phone only and is not synced; the meter's readings enter your log and sync like the rest of your health data.</li>
-        <li><b>Continuous glucose sensor (CGM), when you connect one:</b> if you connect a LibreLinkUp or Dexcom Share account or a Nightscout site, its sign-in details stay on your phone only: the password or access token in the system's secure storage (Keychain on iPhone, Keystore on Android), and the email or username and site address in the app's settings on the phone. Your phone sends them directly to that provider alone (Abbott, Dexcom, or the Nightscout site you set) to fetch your readings. They never pass through our server, are not part of the sync copy, and are sent to no one else. With xDrip+ or Juggluco on Android, readings are read from that app on the same phone, with no internet.</li>
+        <li><b>Account data:</b> your email address (sign-in by a code sent to your email, or by password), and your password if you set one (the authentication provider stores it hashed, never in plain text; we never see it).</li>
+        <li><b>Your profile:</b> name, phone, date of birth, city and country, gender, occupation, weight and height, age at diagnosis, other health conditions you enter, treatment type and insulin doses, and the carb ratio, sensitivity factor and targets you entered. And your <b>profile photo</b> if you choose one: it is downsized on your phone, then kept inside your profile, so it syncs with your copy on our server and is restored with it.</li>
+        <li><b>Health data you enter or import:</b> glucose readings (typed in, from a Bluetooth meter, from a continuous glucose sensor you connect, or from a sensor file), meals &amp; carbs, insulin doses, pens and injection sites, exercise, hypo events, DKA assessments, sick-day mode and their follow-up notes, lab results, medications, vitamins, water, sleep and mood, appointments, notes.</li>
+        <li><b>Data about people you look after:</b> if you create a profile for your child or a parent, their name and health data are kept and synced like yours, and your list of profiles (their names) is part of your copy on our server. If you link their email to that profile (Pro Plus), we send that address a consent email with your name, your email and a six-digit code; until the code is confirmed we keep only a hash of the address and of the code, deleted after a day. Once confirmed, an account is created for that email and linked to the profile.</li>
+        <li><b>Companions:</b> the email of someone you invite as a companion. We keep it in the invite so it appears in their app when they sign in with that address — we do not send them an invitation email. Once they accept, their email stays in the follow link so you can see who follows you. A companion sees your name as it appears in your profile and your latest reading (including your sensor's latest reading if you connect one), and receives the low alert (including a low your sensor reads while the app is open), the DKA risk alert, and very-high and high-carb-meal alerts if you turn those on. An alert carries your name, the glucose value for a low, and for DKA risk the fact that the assessment was high-risk and your latest ketone value if you measured one. We keep their device's notification token to deliver them.</li>
+        <li><b>Bluetooth meter (when you connect one):</b> we read only its readings, their times and their type. The meter's serial number is hashed on your phone, and only that hash is kept, inside reading ids, to avoid duplicates. The app sends no commands to the meter, and Bluetooth is used only to read it. On Android 11 and below the system requires the location permission for any Bluetooth scan, so it is asked for that alone — the app never reads or collects your location. The list of meters you have paired (the meter's name, model and Bluetooth identifier) is kept on this phone only and is not synced; the meter's readings enter your log and sync like the rest of your health data.</li>
+        <li><b>Continuous glucose sensor (CGM), when you connect one (Pro Plus):</b> the app reads your readings from <b>your own Nightscout site</b>, or from a <b>CSV file</b> you export yourself from your sensor's service (such as LibreView or Dexcom Clarity) and pick on your phone. Your site address and access token stay on your phone only: the token in the system's secure storage (Keychain on iPhone, Keystore on Android), and the address in the app's settings on the phone. Your phone sends them directly to your site alone to fetch your readings. They never pass through our server, are not part of the sync copy, and are sent to no one else. The app does not connect to Abbott or Dexcom services.</li>
         <li><b>Sensor readings:</b> kept in a separate database on your phone for 14 days, per profile, and not part of the sync copy. The app fetches them only while it is open. If you have a companion, the app sends your latest sensor reading and its trend to our server in the status snapshot your companions see, at most once every five minutes while readings arrive, and each snapshot replaces the previous one. If the sensor reads a low and an alert goes to your companion, the glucose value is kept in the alert record. What enters your log from them, meaning a reading you save when you log a reading, meal, exercise or hypo, and the days you import from a CSV file, becomes part of your health data and syncs with your account like the rest.</li>
-        <li><b>Meal and lab analysis data (when used):</b> food photos, descriptions or barcodes, and the lab photos or PDF files you upload.</li>
-        <li><b>Free-trial abuse prevention:</b> a one-way salted hash (SHA-256) of your device identifier and of your email, with the number of trial requests used. To confirm the device is genuine, we send a token generated by your phone to Google Play Integrity or Apple DeviceCheck.</li>
+        <li><b>What you send to the smart features (after you agree):</b> food photos or descriptions, the lab photos or PDF files you upload, and your questions to the assistant — see "AI" below. They pass through our server and we do not keep them.</li>
+        <li><b>Barcodes:</b> the barcode number you scan, which your phone sends to Open Food Facts only.</li>
+        <li><b>Free-trial abuse prevention:</b> a one-way salted hash (SHA-256) of your device identifier and of your email, with the number of trial requests used. To confirm the device is genuine, we send a token generated by your phone to Google Play Integrity or Apple DeviceCheck. To limit many trial accounts from one network, we keep a hash of your network address (not the address) salted with the day, deleted after two days.</li>
         <li><b>AI request counter:</b> how many requests you have used, to apply your plan's limit.</li>
-        <li><b>Subscription (when you buy one):</b> the purchase receipt we receive from Google Play or the App Store (the product, the purchase token and transaction id, and the expiry date), the store's renewal, cancellation or refund notices, and your current plan and its expiry, to activate and verify your subscription. We never receive your card or payment details.</li>
+        <li><b>Subscription (when you buy one):</b> the purchase receipt we receive from Google Play or the App Store (the product, the purchase token and its hash, the transaction id or order number, the platform, and the expiry date), the store's renewal, cancellation or refund notices, and your current plan and its expiry, to activate and verify your subscription and stop a receipt being reused. We never receive your card or payment details.</li>
         <li><b>The last day you opened the app:</b> once a day the app records on our server the date (not the time) and whether you have finished setup (your carb ratio is set). We use it only to know how many people keep using the app; nothing about what you did in it or where you were is recorded.</li>
+        <li><b>Crash reports:</b> when the app crashes it sends a technical report to Firebase Crashlytics, with email, identifiers and health values removed.</li>
         <li><b>Voice input (when used):</b> your phone's speech-recognition service (from Apple or Google) turns your voice into text. We do not receive or keep the audio.</li>
-        <li><b>Notifications:</b> to schedule reminders locally. While you are signed in, we keep your device's notification token, its platform and the app language, so alerts meant for you, such as those from someone you follow as a companion, reach you in your language.</li>
+        <li><b>Notifications:</b> reminders are scheduled on your device. While you are signed in, we keep your device's notification token, its platform and the app language, so alerts meant for you, such as those from someone you follow as a companion, reach you in your language.</li>
       </ul>
 
       <h3>How we use it</h3>
-      <p>To run the app's features: logging, advisory calculations, reminders, reports, sync between your devices, companions and profile management, and AI analysis; to prevent repeated free trials; and to know how many people keep using the app (the date of the last open only). <b>We do not sell your data and do not use it for advertising.</b></p>
+      <p>To run the app's features: logging, advisory calculations, reminders, reports, sync between your devices, companions and profile management, and the smart features you request; to prevent repeated free trials; and to know how many people keep using the app (the date of the last open only). <b>We do not sell your data, do not use it for advertising, and show no ads.</b></p>
 
       <h3>Where data is stored</h3>
       <ul>
-        <li><b>Locally on your device</b> (on-device database) — the primary store.</li>
-        <li><b>On the server (Supabase):</b> account &amp; authentication data, and a copy of your health data in your account, to sync your devices and restore everything on a new phone. No one else reaches it except those you choose: a parent who linked your profile to your email sees and logs in your record while that management lasts, and a companion you invite sees only your latest reading and the alerts you allow.</li>
-        <li>What you send to the AI features passes through our server to the AI provider to carry out your request only.</li>
-        <li>Backups you export can be password-encrypted (AES-256).</li>
+        <li><b>Locally on your device</b> (on-device database).</li>
+        <li><b>On our server (Supabase):</b> while you are signed in, <b>your health records and your profile — including your name and your profile photo if you set one — are synced to your account automatically</b>, together with the profiles of people you look after and their names, and the sensor readings you confirmed, so everything comes back on a new phone. Also account, subscription and companion data (including your name in the status snapshot, and the emails of people you invited or whose email you linked). No one else reaches it except those you choose: a parent who linked your profile to your email sees and logs in your record while that management lasts, and a companion you invite sees only your latest reading and the alerts you allow. Storage is encrypted at rest and transport uses HTTPS; this is not encryption with your own password.</li>
+        <li>What you send to the AI features passes through our server to Google Gemini to carry out your request only, and is not kept on our server.</li>
+        <li>A backup file you export yourself can be password-protected (AES-256-GCM).</li>
       </ul>
+
+      <h3>AI (Google Gemini)</h3>
+      <p>The smart features — meal photo or description analysis, reading a lab report (photo or PDF), the assistant, smart summaries, pattern analysis explanations and the eating plan — send, through our server, to <b>Google's Gemini</b> service:</p>
+      <ul>
+        <li>the meal photo or description and weight;</li>
+        <li>the lab report photo or file as it is, <b>which may show your name and file number</b>;</li>
+        <li>your question and the last messages of the conversation, with a numeric summary of your data (average glucose, time in range, number of lows and highs, insulin on board, the names of your medications, your latest labs);</li>
+        <li>the aggregated numbers behind summaries, and the pattern-analysis findings worked out on your phone (not your readings themselves) when you ask for them to be explained;</li>
+        <li>for the eating plan: age, sex, weight, height, goal, the other health conditions you entered in your profile, and a 14-day readings summary (average, number of readings, lows and highs) — <b>no insulin doses</b>.</li>
+      </ul>
+      <p><b>Nothing is sent before you agree</b> on a screen shown once before your first request, and you can change your choice at any time in Settings → App → "Smart features &amp; your data". Photos, files and text are sent to carry out the request only and then discarded; <b>we do not store them on our servers</b>. Values you save from a result become part of your health data. We use Google's paid service, under which Google does not use this data to train its models.</p>
 
       <h3>Data retention</h3>
       <p>We keep each kind of data only for the period set out below:</p>
@@ -228,10 +292,10 @@
         <tr><th>Data</th><th>Retention period</th></tr>
         <tr>
           <td>Your health data on your device</td>
-          <td>Kept until you delete it, delete your account, or uninstall the app. We never delete anything from your device automatically.</td>
+          <td>Kept until you delete it, delete your account, or uninstall the app. We never delete anything from your log on your device automatically.</td>
         </tr>
         <tr>
-          <td>Cloud sync snapshot</td>
+          <td>Cloud sync copy (your health records, your profile, name and profile photo, and the profiles of people you look after)</td>
           <td>Kept while your account exists and replaced on every change. Permanently deleted when you delete your account.</td>
         </tr>
         <tr>
@@ -239,23 +303,32 @@
           <td>Kept while your account exists. Permanently deleted when you delete your account.</td>
         </tr>
         <tr>
-          <td>Meal photos and descriptions, lab photos and files, and what is sent to explain a pattern analysis</td>
-          <td><b>We do not store them.</b> They are sent to the AI provider to carry out that single request and are not saved on our servers. (Values you save from a result become part of your health data.)</td>
+          <td>Meal photos and descriptions, lab photos and files, assistant questions, and what is sent for summaries, pattern analysis and the eating plan</td>
+          <td><b>We do not store them.</b> They are sent to Google Gemini to carry out that single request and are not saved on our servers. (Values you save from a result become part of your health data.)</td>
         </tr>
         <tr>
-          <td>Doctor report share link</td>
-          <td>Stops working <b>7 days</b> after it is created, or as soon as you revoke it.</td>
+          <td>Doctor report share link (and the copy of the report it opens, which shows your name, age and readings)</td>
+          <td>The link stops working <b>7 days</b> after it is created, or as soon as you stop it in the app. Stopping it deletes the report copy from our server at once; if you let it expire, the copy is deleted automatically <b>30 days</b> after it expired.</td>
         </tr>
         <tr>
           <td>Companion invite code</td>
           <td>Expires after <b>24 hours</b> or on first use, whichever comes first.</td>
         </tr>
         <tr>
-          <td>Companion invite by email</td>
-          <td>Expires after <b>7 days</b> if not accepted, and is deleted with your account.</td>
+          <td>Companion invite by email (with the address you typed)</td>
+          <!-- TODO Omar: no deletion rule for guardian_email_invites in supabase/rebuild — an invite is only marked answered (responded_at) on accept/decline/cancel and is deleted with the inviter's account. If you want it purged earlier, add it to privacy_retention_tick and update this sentence. -->
+          <td>Expires after <b>7 days</b> if not answered. The record of the invite — the address you typed and whether it was accepted — stays on our server until you delete your account, and is deleted with it.</td>
         </tr>
         <tr>
-          <td>The status snapshot your companions see</td>
+          <td>Follow link with your companion (with their email)</td>
+          <td>Kept while both your accounts exist. Deleted when either account is deleted.</td>
+        </tr>
+        <tr>
+          <td>Code for linking an email to a profile</td>
+          <td>Kept as a hash, not text; expires after 15 minutes; the code and the address hash are deleted after <b>one day</b>.</td>
+        </tr>
+        <tr>
+          <td>The status snapshot your companions see (your name and latest reading)</td>
           <td>A single row replaced on each update — no history is built from it. Deleted when you delete your account.</td>
         </tr>
         <tr>
@@ -264,7 +337,7 @@
         </tr>
         <tr>
           <td>Sensor sign-in details and readings</td>
-          <td>Sign-in details stay on your phone only and never reach our servers; readings stay on your phone and are not part of the sync copy (the latest reading your companion sees is kept in the status snapshot above). Readings older than <b>14 days</b> are deleted whenever new ones arrive. Disconnecting the sensor in the app, deleting your account, or signing in to another account on the phone deletes its sign-in details and readings from the phone.</td>
+          <td>Your Nightscout site address and token stay on your phone only and never reach our servers; readings stay on your phone and are not part of the sync copy (the latest reading your companion sees is kept in the status snapshot above). Readings older than <b>14 days</b> are deleted whenever new ones arrive. Disconnecting the sensor in the app, deleting your account, or signing in to another account on the phone deletes its sign-in details and readings from the phone.</td>
         </tr>
         <tr>
           <td>The list of paired meters</td>
@@ -277,6 +350,10 @@
         <tr>
           <td>Subscription receipts and your plan</td>
           <td>Kept while your account exists. Deleted when you delete your account.</td>
+        </tr>
+        <tr>
+          <td>Store notices about a purchase (notice type and time, a hash of the purchase token or the transaction id — no email, no health data)</td>
+          <td>Deleted automatically <b>13 months</b> after they arrive, even after account deletion.</td>
         </tr>
         <tr>
           <td>Receipt record after account deletion</td>
@@ -292,35 +369,54 @@
         </tr>
         <tr>
           <td>Device and email hashes for trial abuse prevention</td>
-          <td><b>Kept after you delete your account</b>, because their only purpose is to stop a new account from getting a second trial. They are not linked to your account or your data, and the email or identifier cannot be recovered from them.</td>
+          <td><b>Kept after you delete your account</b>, because their only purpose is to stop a new account from getting a second trial, then deleted automatically <b>24 months</b> after the first trial. They are not linked to your account or your data, and the email or identifier cannot be recovered from them.</td>
+        </tr>
+        <tr>
+          <td>Network address hash for limiting trial accounts</td>
+          <td>Deleted after <b>two days</b>.</td>
+        </tr>
+        <tr>
+          <td>A hash of an email address our messages bounced from</td>
+          <!-- TODO Omar: no deletion rule for email_bounces in supabase/rebuild (the verdict only looks at the last 30 days). If you want a fixed period, add it to privacy_retention_tick and update this sentence. -->
+          <td>Kept, because its only purpose is to stop us resending sign-in codes to an address that does not receive them. It does not hold the email itself, and the email cannot be recovered from it.</td>
         </tr>
         <tr>
           <td>Apple DeviceCheck mark (iPhone)</td>
           <td>Apple keeps a mark for this device on its servers saying it has used the trial, and it survives deleting the app. It carries no personal data.</td>
         </tr>
       </table>
-      <p class="muted">When you delete your account, every row linked to it is erased from our servers in the same operation — no copy is left behind. Only the trial abuse-prevention hashes and the receipt record described above remain, and they carry no email and no health data.</p>
+      <p class="muted">When you delete your account, every row linked to it is erased from our servers in the same operation, and your cloud backup files are deleted within minutes. Only what is described above as kept remains: the trial abuse-prevention hashes, the receipt record, store notices until their period ends, and the bounced-email hash — none of them carries your email or your health data. What the store (Google Play or the App Store) keeps about your purchases is governed by its own policy.</p>
 
-      <h3>Third parties</h3>
-      <p>We do not sell your data and share it with no one beyond those listed here, each for a single stated purpose:</p>
-      <ul>
-        <li><b>Supabase</b> — authentication, account storage, the sync copy, and live sync between your devices.</li>
-        <li><b>Google (Gemini)</b> — processes what you send to the AI features, and only when you use them: meal photos and descriptions; your chat questions together with a summary of your numbers (glucose averages, doses and the names of your medications); the lab photos or PDF files you upload, which may show your name as printed on them; a summary of your numbers for the period when you ask for the smart summary; the pattern-analysis findings worked out on your phone — not your readings themselves — when you ask for them to be explained; and your meal-plan data.</li>
-        <li><b>Resend</b> — delivering the emails that carry sign-in and verification codes.</li>
-        <li><b>Firebase Crashlytics</b> — crash reports (scrubbed of health values).</li>
-        <li><b>Firebase Cloud Messaging</b> — delivering companion alerts to their devices (on iPhone through Apple's push service).</li>
-        <li><b>Google Play Integrity</b> and <b>Apple DeviceCheck</b> — confirming that the device starting a free trial is genuine.</li>
-        <li><b>Google Play Billing</b> or the <b>Apple App Store</b> — processing and verifying your subscription, depending on the store you installed the app from.</li>
-        <li><b>Cloudflare</b> — serving and protecting our domain.</li>
-        <li><b>Open Food Facts</b> — when you scan a product barcode, your phone sends only the barcode number directly to the open Open Food Facts database to fetch the product's nutrition data; we send it nothing else about you.</li>
-        <li><b>Services you connect yourself:</b> LibreLinkUp (by Abbott), Dexcom Share (by Dexcom) and your own Nightscout site. Your phone connects to them directly with your sign-in details only to fetch your readings; we send them none of your data, and what passes between you and them is governed by their privacy policies. Day1T1 is not affiliated with any of them. They are run by their own companies, so a link may stop working if a company changes its service.</li>
-      </ul>
+      <h3>Third parties (processors)</h3>
+      <p>We do not sell your data and share it with no one beyond those listed here, each for a stated purpose:</p>
+      <table class="proc">
+        <tr><th>Who</th><th>Why</th><th>What they receive</th></tr>
+        <tr><td>Supabase</td><td>server, authentication, sync and storage</td><td>everything synced and kept on our server (above)</td></tr>
+        <tr><td>Google — Gemini</td><td>smart features, after your consent</td><td>see the "AI" section</td></tr>
+        <tr><td>Google — Firebase (Crashlytics, Cloud Messaging)</td><td>scrubbed crash reports; delivering alerts (on iPhone through Apple's push service)</td><td>crash report without email or health values; device token and alert text</td></tr>
+        <tr><td>Google Play (Billing, Play Integrity)</td><td>purchases and their verification; checking a real device for the free trial</td><td>purchase token; device integrity token</td></tr>
+        <tr><td>Apple (App Store/StoreKit, DeviceCheck, APNs)</td><td>iPhone purchases and verification, the trial, notifications</td><td>receipt; device token; push token</td></tr>
+        <tr><td>Resend</td><td>emails: sign-in and verification codes, the consent email when you link an email to a profile, and the notice to that address once linked</td><td>recipient email and message text (including your name and email in the linking email)</td></tr>
+        <tr><td>Open Food Facts</td><td>identifying food from a barcode</td><td>the barcode number only, from your phone directly</td></tr>
+        <!-- TODO Omar: the "what they receive" for Cloudflare is generic (technical connection data). Confirm what passes through Cloudflare on day1t1.com (e.g. the doctor report page /r/, request logs). -->
+        <tr><td>Cloudflare</td><td>serving and protecting our domain</td><td>technical connection data for our domain</td></tr>
+        <tr><td>Your own Nightscout site</td><td>reading your sensor</td><td>its address and token, from your phone directly — not via our server, and we send it none of your data; governed by its host's policy</td></tr>
+        <tr><td>Your companions (if you invite them)</td><td>following you</td><td>your name, latest reading and trend, and the alerts you allow</td></tr>
+        <tr><td>Your doctor (if you send a link or PDF)</td><td>the report</td><td>what the report contains, through a link or file you create</td></tr>
+      </table>
+      <p>CSV files you export from LibreView (by Abbott) or Dexcom Clarity (by Dexcom) are read on your phone; the app does not connect to those services. <b>Day1T1 is not affiliated with Nightscout, Abbott or Dexcom</b>; all names are trademarks of their owners. We disclose your data to no one else except under a binding legal order.</p>
       <p class="muted">Some of these services operate servers outside Egypt, so using the app involves a cross-border transfer of data.</p>
 
-      <h3>Your rights — account &amp; data deletion</h3>
-      <p>You can <b>permanently delete your account and all data</b> in-app: Settings → Account → "Delete account &amp; data". This erases your data from the device and the server and cannot be undone. Or email our support.</p>
+      <h3>Children</h3>
+      <p>Day1T1 is not directed at children on their own. <b>Account holders must be 16 or older.</b> A parent can follow a child in a <b>profile</b> inside the parent's account, or link the child's email to that profile (Pro Plus) so the child logs from their own phone <b>with the parent's consent and supervision</b>, and the parent sees what they log. A parent can ask us to delete a child's data at any time by emailing support, or by deleting the profile or account.</p>
 
-      <div class="note">⚠️ <b>Medical notice:</b> Day1T1 is an advisory tool. It does not replace your doctor and makes no treatment decisions.</div>
+      <h3>Your rights — account &amp; data deletion</h3>
+      <p>You can <b>permanently delete your account and all data</b> in the app: Settings → <b>Advanced</b> → "Delete account &amp; data". This erases your data from your phone and our server, the synced copies, and the sensor data on the phone, and cannot be undone — except what is described above as kept. You can also use the <a href="./delete-account.html">account-deletion page</a>, or email support. You can delete any single record without deleting your account.</p>
+
+      <h3>Changes</h3>
+      <p>We may update this policy and will post changes, with their date, at the same URL. If what is sent to the AI provider, or to whom, changes, the app will ask for your consent again.</p>
+
+      <div class="note">⚠️ <b>Medical notice:</b> Day1T1 is an advisory tool. It does not replace your doctor and makes no treatment decisions. Sensor readings are for information: if one doesn't match how you feel, confirm with a fingerstick before dosing.</div>
     </div>
 
     <footer>© Day1T1 — 2026. جميع الحقوق محفوظة · All rights reserved.</footer>
